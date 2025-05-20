@@ -1,0 +1,2087 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap'); */
+:root{
+    --bg-color: #fff;
+    --light-bg-color: #f9fafb;
+    --info-color: #3ed4f6;
+    --info-color-rgb: 62, 212, 246;
+    --pink-color: #ff769f;
+    --yellow-color: #ffc844;
+    --green-color: #3ad0ae;
+    --text-color: #666;
+    --second-color: #999;
+    --white-color: #fff;
+    --box-shadow: inset 0 0 12px 0 rgba(255, 255, 255, .5);
+    --card-box-shadow: 0 4px 12px 0 rgba(62,212,246,.6);
+    --hover-border: 2px solid #ecedee;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: normal;
+    background-color: var(--bg-color);
+}
+.ad_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 0;
+}
+.div-gpt-ad-1601829-1 .div-gpt-ad-1601829-2 .div-gpt-ad-1601829-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 0;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+span{
+    display: block;
+}
+img{
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+ul, ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+button{
+    border: 0;
+    outline: none;
+}
+.container{
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.row{
+    display: flex;
+}
+.js_center{
+    justify-content: center;
+}
+.js_between{
+    justify-content: space-between;
+}
+.align_center{
+    align-items: center;
+}
+.bg_info{
+    background: var(--info-color);
+}
+.bg_pink{
+    background: var(--pink-color);
+}
+.bg_yellow{
+    background: var(--yellow-color);
+}
+.bg_green{
+    background: var(--green-color);
+}
+.overflow_hidden{
+    overflow: hidden;
+}
+.mb_0{
+    margin-bottom: 0;
+}
+.primary_btn {
+    width: 110px;
+    height: 40px;
+    background: var(--bg-color);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid  rgb(var(--info-color-rgb), .5);
+    color: var(--info-color);
+}
+i{
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* sidebar menu | start */
+.dicegamessos_game_left_sidebar {
+    width: 240px;
+    padding-left: 10px;
+    padding-top: 10px;
+    min-height: 100%;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.dicegamessos_game_content_box {
+    padding: 24px;
+    border-radius: 8px;
+    background: var(--light-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    max-width: 125px;
+}
+.dicegamessos_game_navigation {
+    margin-top: 24px;
+    width: 100%;
+}
+.nav_icon {
+    margin-right: 16px;
+    max-height: 19px;
+    max-width: 19px;
+}
+.nav_icon i{
+    font-size: 19px;
+}
+.nav_menu_item {
+    font-weight: 600;
+    width: 100%;
+    color: var(--text-color);
+    padding: 0 25px;
+    border-radius: 25px;
+    height: 50px;
+    /* line-height: 50px; */
+    align-items: center;
+    border: 2px solid transparent;
+    transition: all .3s;
+}
+.nav_menu_item:hover {
+    background: var(--white-color);
+    border: var(--hover-border);
+}
+.nav_menu_item:not(.mt_0) {
+    margin-top: 16px;
+}
+.dicegamessos_game_content_box.menu_list_box {
+    margin-top: 10px;
+    min-height: calc(100% - 238px);
+}
+.dicegamessos_game_sidebar_content, .dicegamessos_game_sidebar_container {
+    height: 100%;
+}
+.tablet_icon {
+    margin-left: 20px;
+    color: #333;
+}
+.tablet_icon i{
+    font-size: 20px;
+}
+.tablet_logo {
+    width: 100px;
+    height: 40px;
+}
+header .row {
+    align-items: center;
+    justify-content: space-between;
+}
+header{
+    display: none;
+    height: 50px;
+    background-color: var(--light-bg-color);
+    padding: 5px 0;
+}
+.dicegamessos_game_close_icon i {
+    font-size: 19px;
+}
+.dicegamessos_game_close_icon {
+    max-height: 19px;
+    display: none;
+    margin-left: auto;
+    color: var(--text-color);
+}
+.dicegamessos_game_left_sidebar.sidebar_open {
+    width: 100%;
+    background: rgba(0, 0, 0, .3);
+}
+.nav_menu_item.active {
+    background: var(--info-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 8px 0 rgb(var(--info-color-rgb), .7);
+    border: 2px solid #fff;
+}
+/* sidebar menu | end */
+
+/* game content body | start */
+.dicegamessos_game_body_wrapper {
+    padding-bottom: 6px;
+    width: 100%;
+    padding-left: 240px;
+}
+.dicegamessos_game_box {
+    margin-top: 24px;
+    /* margin-bottom: 24px; */
+}
+.dicegamessos_game_box:last-child {
+    margin-bottom: 24px;
+}
+
+.dicegamessos_game_heading_div {
+    height: 50px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.dicegamessos_game_heading_wrap {
+    padding: 0 20px;
+    border-radius: 16px;
+    height: 46px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    border: 2px solid rgba(255, 255, 255, .6);
+    backdrop-filter: blur(4px);
+}
+.dicegamessos_game_heading_wrap h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white-color);
+}
+.more_btn {
+    color: var(--white-color);
+    transition: all .3s;
+}
+.more_btn:hover {
+    color: var(--text-color);
+}
+.dicegamessos_game_list_grid {
+    margin-top: 16px;
+    display: grid;
+    grid-gap: 16px 16px;
+    grid-template-columns: repeat(10, calc((100% - 144px) / 10));
+}
+.dicegamessos_game_list_card {
+    display: block;
+    width: 100%;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.dicegamessos_game_card_img {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    border: 2px solid transparent;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.dicegamessos_game_card_img img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+}
+.dicegamessos_game_card_hover {
+    position: absolute;
+    width: 100%;
+    background: rgba(62, 212, 246, .7);
+    padding: 3px 10px;
+    transition: all .3s;
+    bottom: -30px;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+.dicegamessos_game_card_hover p {
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-align: center;
+}
+.dicegamessos_game_list_grid .dicegamessos_game_list_card:hover .dicegamessos_game_card_body .dicegamessos_game_card_img {
+    border: 2px solid var(--info-color);
+}
+.dicegamessos_game_list_grid .dicegamessos_game_list_card:hover {
+    box-shadow: 0 4px 12px 0 rgba(62, 212, 246, .6);
+    transform: translateY(-4px);
+}
+.dicegamessos_game_list_grid .dicegamessos_game_list_card:hover .dicegamessos_game_card_hover{
+    bottom: 0;
+}
+.dicegamessos_game_box:not(.page_inner_game_box) .dicegamessos_game_list_card:first-child {
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+}
+.dicegamessos_game_box:not(.page_inner_game_box) .dicegamessos_game_list_card:nth-child(2) {
+    grid-row: 1 / 3;
+    grid-column: 4 / 6;
+}
+.dicegamessos_game_box:not(.page_inner_game_box) .dicegamessos_game_list_card:nth-child(3) {
+    grid-row: 2 / 4;
+    grid-column: 6 / 8;
+}
+.dicegamessos_game_box:not(.page_inner_game_box) .dicegamessos_game_list_card:nth-child(4) {
+    grid-row: 1 / 3;
+    grid-column: 9 / 11;
+}
+/* .dicegamessos_game_box:last-child{
+    margin-bottom: 24px;
+} */
+/* game content body | end */
+
+/* footer | start */
+.dicegamessos_game_footer_top {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+.footer_link_item {
+    font-weight: 400;
+    display: inline-block;
+    color: var(--second-color);
+    margin-right: 20px;
+    line-height: 22px;
+}
+.footer_link_item:hover {
+    opacity: .6;
+}
+.dicegamessos_game_footer_bottom {
+    font-weight: 400;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    color: #999;
+    line-height: 18px;
+    margin-bottom: 24px;
+}
+/* footer | end */
+
+/* ad | start */
+.ad_box {
+    margin: 24px 0;
+    min-height: 19px;
+    font-size: 12px;
+    text-align: center;
+    color: #b9bdc6;
+}
+
+.div-gpt-ad-1601829-1 .div-gpt-ad-1601829-2 .div-gpt-ad-1601829-3 {
+
+}
+/* ad | end */
+
+
+/* category page | start */
+.dicegamessos_game_categories_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.dicegamessos_game_cate_list_card {
+    width: calc((100% - 48px) / 4);
+    margin: 16px 16px 0 0;
+}
+.dicegamessos_game_cate_list_card:nth-child(4n) {
+    margin-right: 0;
+}
+.game_cate_list_body {
+    background: #f9fafb;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    transition: all .3s;
+}
+.game_cate_list_body:hover {
+    background: #eefcff;
+}
+.dicegamessos_game_card_cate_img {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+    border: 1px solid #ecedee;
+    overflow: hidden;
+}
+.dicegamessos_game_cate_info {
+    width: calc(100% - 110px);
+    padding: 0 12px;
+}
+.dicegamessos_game_cate_info h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.game_cate_list_body:hover h5{
+    color: var(--info-color);
+}
+.dicegamessos_game_cate_info p {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #999;
+}
+.dicegamessos_game_cate_card_button {
+    width: 40px;
+    height: 40px;
+}
+.game_cate_list_body:hover .primary_btn{
+    border: none;
+    background: linear-gradient(180deg, #AEFEFF 0%, #3ED4F6 100%);
+    box-shadow: 0 2px 6px 0 rgba(62, 212, 246, .7);
+}
+.dicegamessos_game_cate_card_button i{
+    font-size: 15px;
+}
+.top_game_cate_list .game_cate_list_body {
+    flex-direction: column;
+}
+.top_game_card {
+    width: calc((100% - 80px) / 6);
+    margin: 16px 16px 0 0;
+}
+.top_game_card:nth-child(4n){
+    margin-right: 16px;
+}
+.top_game_card:nth-child(6n) {
+    margin-right: 0;
+}
+.top_game_card_body {
+    flex-direction: column;
+    padding: 24px 16px;
+}
+.dicegamessos_game_card_top_img {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.top_card_info{
+    padding: 0;
+    text-align: center;
+    margin-top: 16px;
+    width: 100%;
+}
+.top_card_info p i{
+    font-size: 12px;
+}
+.game_cate_list_body:hover .primary_btn{
+    color: var(--bg-color);
+}
+.top_card_button {
+    margin-top: 16px;
+}
+/* category page | end */
+
+
+/* game information page | start */
+.game_detail_wrapper h4 {
+    color: #333;
+    font-size: 16px;
+    line-height: 14px;
+    margin-bottom: 8px;
+}
+.review_star_box {
+    margin-top: 12px;
+}
+.game_detail_wrapper{
+    text-align: center;
+    color: #999;
+}
+.game_detail_wrapper p {
+    font-weight: 400;
+    font-size: 12px;
+    color: #999;
+}
+.dicegamessos_game_detail_img {
+    width: 122px;
+    height: 122px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-right: 24px;
+}
+.dicegamessos_game_detail h2 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-bottom: 24px;
+}
+.dicegamessos_game_rate_item {
+    margin: 0 24px;
+    padding: 0 24px;
+    position: relative;
+}
+.dicegamessos_game_rate_item:before,  .dicegamessos_game_rate_item:after{
+    content: "";
+    width: 1px;
+    height: 24px;
+    background: #555;
+    position: absolute;
+    top: 8px;
+}
+.dicegamessos_game_rate_item::before{
+    left: 0;
+}
+.dicegamessos_game_rate_item:after{
+    right: 0;
+}
+.review_star_box i {
+    font-size: 12px;
+    margin-right: 5px;
+}
+.dicegamessos_game_about_box {
+    padding: 0;
+    flex-wrap: wrap;
+}
+.dicegamessos_game_about_content {
+    width: calc(33% - 8px);
+    display: flex;
+    border-radius: 10px;
+    margin-top: 16px;
+    background: #f9fafb;
+    padding: 10px 18px;
+}
+.dicegamessos_game_content_item {
+    width: 100%;
+    padding: 0 16px;
+}
+.dicegamessos_game_about_icon{
+    max-height: 24px;
+}
+.dicegamessos_game_about_icon i {
+    font-size: 23px;
+}
+.dicegamessos_game_content_item span, .link_provide_text, .user_review_info_rate .user_info_date_text {
+    font-size: 12px;
+    color: #999;
+}
+.dicegamessos_game_content_item .row{
+    align-items: center;
+}
+.dicegamessos_game_install_btn_div {
+    width: calc((100% - 32px) / 3);
+}
+.dicegamessos_game_install_btn_div .row{
+    align-items: center;
+}
+.google_play_icon_text i {
+    margin-right: 16px;
+    font-size: 24px;
+}
+.dicegamessos_game_install_btn {
+    width: 100%;
+    padding: 16px;
+    width: 100%;
+    background: #f9fafb;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all .3s;
+    color: #333;
+}
+.dicegamessos_game_install_btn:hover{
+    border: 2px solid #fff;
+    background: var(--info-color);
+    box-shadow: 0 0 8px 0 rgba(62, 212, 246, .7);
+    color: var(--bg-color);
+}
+.game_info_page_subtitle{
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+}
+.game_info_page_subtitle:not(.mb_0) {
+    margin-bottom: 16px;
+}
+.dicegamessos_game_install_btn:hover .link_provide_text{
+    color: var(--bg-color);
+}
+.app_store_btn {
+    margin-left: 16px;
+}
+.game_security_div p {
+    font-size: 12px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+.game_security_div .verified_icon_text{
+    color: #28c840;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 16px;
+}
+.verified_icon_text i{
+    font-size: 16px;
+    margin-right: 16px;
+}
+.dicegamessos_game_similar_wrap {
+    margin: 24px 0;
+}
+.game_security_div {
+    border-top: 1px solid #eee;
+    padding-top: 17px;
+    margin-top: 16px;
+}
+.similar_game_list_grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0;
+}
+.similar_game_card {
+    margin: 16px 16px 0 0;
+    width: calc((100% - 114px) / 8);
+    overflow: hidden;
+}
+.similar_game_list_grid .similar_game_card:hover {
+    box-shadow: none;
+    transform: translateY(0px);
+}
+.similar_game_card:nth-child(8n){
+    margin-right: 0;
+}
+.dicegamessos_game_module_box {
+    background: #f9fafb;
+    border-radius: 8px;
+    padding: 16px;
+}
+.dicegamessos_game_module_desc {
+    overflow-y: scroll;
+    position: relative;
+    line-height: 26px;
+    padding-right: 20px;
+    color: #333;
+    box-sizing: content-box;
+    font-size: 14px;
+    font-weight: 400;
+    height: 260px;
+}
+.dicegamessos_game_module_desc::-webkit-scrollbar{
+    margin-right: 10px;
+    width: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #eee;
+}
+.dicegamessos_game_module_desc::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: var(--info-color);
+}
+.swiper_button{
+    color: #333;
+}
+.game_banner_slider_grid .swiper-button-next:after{
+    content: 'next';
+    font-size: 14px;
+}
+.game_banner_slider_grid  .swiper-button-prev:after{
+    content: 'prev';
+    font-size: 14px;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    content: "";
+}
+.swiper_slider_image_main .swiper_button {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-color);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    cursor: pointer;
+    /* box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2); */
+}
+.swiper_slider_image_main .swiper .swiper-wrapper .game_info_img_slide {
+    width: auto;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex
+;
+    transition-property: transform;
+    box-sizing: content-box;
+}
+.swiper-pointer-events {
+    touch-action: pan-y;
+}
+.swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+.swiper_slider_image_main .swiper_button {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-color);
+    border-radius: 25px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    cursor: pointer;
+    /* box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2); */
+}
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.swiper-slide img {
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+.guess_you_like_wrap{
+    margin-top: 16px;
+}
+.review_form_main {
+    background: var(--light-bg-color);
+    border-radius: 8px;
+    padding: 16px;
+}
+.game_review_form {
+    background: var(--bg-color);
+    border-radius: 8px;
+    padding: 16px;
+}
+.review_rate_grid {
+    max-width: 328px;
+    width: 100%;
+    text-align: center;
+}
+.review_rate_grid p {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+.rate_icon i {
+    font-size: 17px;
+}
+.rate_icon {
+    max-width: 35px;
+    min-height: 35px;
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    border-radius: 50%;
+    line-height: 34px;
+    margin-right: 10px;
+    color: var(--bg-color);
+    margin-bottom: 9px;
+}
+.review_rate_grid .rate_icon{
+    /* background-color: #ddd; */
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+.review_rate_grid .rate_icon:hover{
+    transform: scale(1.12);
+}
+.rate_icon_solid {
+    background-color: var(--info-color);
+}
+.review_form_group_box {
+    width: calc(100% - 344px);
+    margin-left: 16px;
+}
+.review_form_wrap {
+    margin-bottom: 15px;
+}
+.review_use_name_box {
+    margin-top: 16px;
+}
+.form_control {
+    font-weight: 600;
+    font-family: 'Baloo 2';
+    font-size: 14px;
+    color: #999;
+    width: 100%;
+    outline: none;
+    color: #999;
+    text-indent: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: none;
+    line-height: 20px;
+    padding: 0 0 0 10px;
+    height: 44px;
+}
+.review_textarea{
+    min-height: 100px;
+    height: auto;
+    resize: none;
+    padding: 16px 10px 6px;
+}
+textarea::placeholder, input::placeholder {
+    font-weight: 600;
+    font-family: 'Baloo 2';
+    font-size: 14px;
+    color: #999;
+}
+.review_rate_box {
+    margin-bottom: 5px;
+}
+input[name="name"].form_control {
+    width: calc(100% - 146px);
+}
+.submit_button {
+    font-weight: 600;
+    font-family: 'Baloo 2';
+    font-size: 14px;
+    width: 130px;
+    height: 44px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #9CEDFF 0%, #3ED4F6 100%);
+    box-shadow: 0 2px 6px 0 rgb(var(--info-color-rgb), .7);
+    color: #fff;
+    margin-left: 16px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.user_review_info {
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+}
+.user_review_info h3 {
+    color: #333;
+    font-weight: 600;
+}
+.user_review_info_rate .rate_icon {
+    min-width: 12px;
+    width: 100%;
+    min-height: 12px;
+    line-height: 12px;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+.user_review_info .review_rate_item {
+    padding: 10px 5px 10px 0;
+}
+.user_review_info_rate .rate_icon i{
+    font-size: 6px;
+}
+.play_info_content .rate_icon i {
+    margin-left: -1px;
+}
+.user_review_info_rate p{
+    font-weight: 400;
+}
+.user_review_info p{
+    font-weight: 400;
+    color: var(--text-color);
+}
+/* game information page | end */
+
+
+/* online game page | start */
+.online_game_top_card_img {
+    position: relative;
+    overflow: unset;
+}
+.online_game_top_card_img img{
+    border-radius: 16px;
+}
+.online_game_top_card_img .game_icon_svg {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 50px;
+    height: 50px;
+    background: var(--info-color);
+    border-radius: 25px;
+    color: var(--bg-color);
+}
+.online_game_top_card_img .game_icon_svg i {
+    font-size: 22px;
+}
+.game_icon_svg svg path{
+    fill: var(--bg-color);
+}
+/* online game page | end */
+
+/* play online game page | start */
+.game_video {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.play_game_body {
+    width: calc(100% - 316px);
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 16px;
+}
+.video_game_wrap {
+    width: 100%;
+    height: 530px;
+    position: relative;
+    overflow: hidden;
+}
+.iframe_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.iframe_img .game_bg_img  {
+    min-width: calc(100% + 20px);
+    width: 100%;
+    height: calc(100% + 20px);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: rgba(0, 0, 0, .3);
+    object-fit: cover;
+    object-position: center;
+    /* -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -ms-filter: blur(8px); */
+    filter: blur(8px);
+}
+.game_video_info {
+    padding-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+.game_video_img {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #fff;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.second_btn {
+    margin-top: 30px;
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background: linear-gradient(180deg, #9CEDFF 0%, #3ED4F6 100%);
+    box-shadow: 0 2px 6px 0 rgb(var(--info-color-rgb), .7);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+}
+.mobile_play_btn{
+    display: none;
+}
+.play_info_content_wrapper {
+    padding: 16px;
+    background: var(--light-bg-color);
+}
+.play_info_content {
+    font-size: 24px;
+    width: calc(100% - 230px);
+}
+.play_info_game_title h3 {
+    font-size: 24px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.user_review_info_rate {
+    color: #999;
+    font-weight: 700;
+    font-size: 16px;
+}
+.user_review_info_rate span{
+    margin-right: 5px;
+    line-height: 39.83px;
+}
+.choice_box {
+    max-height: 24px;
+}
+.choice_btn {
+    margin-left: 8px;
+    color: #666;
+    font-weight: 700;
+    padding-right: 24px;
+}
+.choice_btn i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+.full_screen{
+    padding-left: 24px;
+    cursor: pointer;
+    border-left: 1px solid #e8e9ea;
+}
+.full_screen i{
+    font-size: 20px;
+    color: var(--text-color);
+}
+.dicegamessos_game_play_game_main .dicegamessos_game_module_desc{
+    height: 130px;
+}
+.dicegamessos_game__item .game_video.active {
+    display: block;
+}
+.video_game_wrap .iframe_img.active {
+    display: none;
+}
+.video_game_wrap iframe.game_iframe {
+    display: block;
+    width: 1px;
+    min-width: 100%;
+    height: 1px;
+    min-height: 100%;
+    border: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+.game_video.active .video_game_wrap .game_iframe {
+    position: fixed;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video_game_wrap .back_arrow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border-radius: 25px;
+    background: #2e455f;
+    color: var(--bg-color);
+    z-index: 999;
+}
+.video_game_wrap .back_arrow i{
+    font-size: 18px;
+}
+.game_video.active .video_game_wrap .back_arrow{
+    display: flex;
+}
+.play_game_icon{
+    width: 53px;
+    height: 53px;
+    background-image: url('../../public/images/gameicon.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* play online game page | end */
+
+/* parkour page | start */
+.category_game_slider_wrap{
+    margin-bottom: 16px;
+}
+.hot_game_box_wrap{
+    margin-top: 16px;
+}
+.game_banner_slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    display: inline-block;
+    padding: 2px 0;
+    position: relative;
+}
+.swiper-wrapper .game_banner_slide_container {
+    width: 71%;
+    height: 248px;
+}
+.game_banner_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px 0 rgba(62, 212, 246, .6);
+    object-fit: cover;
+    object-position: center;
+}
+.game_banner_img img{
+    width: 100%;
+}
+.game_banner_slide .top_btn_img {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 90px;
+    height: 42px;
+}
+.game_banner_slide .top_btn_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.swiper_slider_image_main .swiper_button_dark {
+    background: rgba(0, 0, 0, .3);
+    color: var(--bg-color);
+}
+.swiper_slider_image_main .swiper_button_dark:hover{
+    color: var(--info-color);
+}
+.swiper_slider_image_main .swiper_button_dark.swiper-button-prev{
+    left: 15%;
+    font-size: 16px;
+}
+.swiper_slider_image_main .swiper_button_dark.swiper-button-next{
+    right: 15%;
+    font-size: 16px;
+}
+.slider_game_button {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    box-shadow: 4px 4px 0 0 #ff683d;
+    border-radius: 16px;
+    background: var(--bg-color);
+    padding-right: 12px;
+}
+.slider_game_button img {
+    margin-right: 6px;
+    width: 46px;
+    height: 46px;
+    border: 2px solid var(--bg-color);
+    overflow: hidden;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.slider_game_button span {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+.game_banner_slider_grid {
+    margin-top: 20px;
+}
+.slide_card_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.more_page_heading_wrap h2 {
+    font-size: 1.5em;
+}
+.game_banner_slide_container.swiper-slide-prev .game_banner_slide::before, .game_banner_slide_container.swiper-slide-next .game_banner_slide::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .5);
+}
+.parkour_game_card_slider_main  .swiper_button {
+    font-size: 12px;
+    transition: all .3s;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, .7);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+    border-radius: 24px;
+    border: 1px solid #e3e5e8;
+    margin: 0 30px;
+    position: unset;
+}
+.parkour_game_card_slider_main .swiper_button:hover {
+    border: 1px solid var(--info-color);
+    color: var(--info-color);
+}
+.parkour_game_card_slider_main .swiper_button.swiper-button-disabled {
+    opacity: 1;
+    cursor: pointer;
+    pointer-events: initial;
+}
+.parkour_game_card_slider_main .card_slider_pagination {
+    left: calc(50% - 10px);
+    bottom: 12px;
+    width: auto;
+}
+.card_slider_pagination .swiper-pagination-current{
+    color: var(--info-color);
+}
+.card_slider_pagination span{
+    display: inline-block;
+}
+.parkour_game_card_slider_main .card_button_div {
+    width: 100%;
+    margin-top: 12px;
+    z-index: 2;
+    padding-bottom: 5px;
+}
+/* parkour page | end */
+
+/* about page | start */
+.about_page_subtitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.dicegamessos_game_about_desc p {
+    font-size: .9em;
+    margin-bottom: 15px;
+    line-height: 1.6em;
+    color: #999;
+}
+.game_page_tb_margin {
+    margin: 16px 0;
+}
+.about_page_form_group{
+    margin-bottom: 20px;
+}
+.form__control {
+    font-family: 'Baloo 2';
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-radius: 8px;
+    border: none;
+    text-indent: 1em;
+    color: #999;
+    outline: none;
+    padding: 0;
+}
+.msg_form_control {
+    width: 100%;
+    resize: none;
+    outline: none;
+    color: #999;
+    text-indent: 1em;
+    padding-top: 15px;
+    background: #fff;
+    border-radius: 8px;
+    border: none;
+    height: 235px;
+}
+.about_page_form .submit_button {
+    margin: 0;
+}
+.error{
+    color: red;
+    padding-left: 20px; 
+}
+/* about page | end */
+
+/* search page | start */
+.search_bar_wrapper {
+    max-width: 368px;
+    width: 100%;
+    height: 42px;
+    overflow: hidden;
+    transition: all .3s;
+    position: relative;
+}
+.search_page_back_icon {
+    width: 42px;
+    height: 42px;
+    color: var(--info-color);
+    font-size: 16px;
+}
+.search_bar_input {
+    font-family: 'Baloo 2';
+    font-size: 14px;
+    text-indent: 12px;
+    color: #999;
+    -webkit-text-fill-color: #999;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 26px;
+    border: 2px solid var(--info-color);
+}
+.search_submit_btn {
+    font-size: 20px;
+    position: absolute;
+    width: 50px;
+    height: 32px;
+    top: 5px;
+    right: 5px;
+    border-radius: 26px;
+    background: linear-gradient(180deg, #9CEDFF 0%, #3ED4F6 100%);
+    color: #fff;
+}
+.search_submit_btn i{
+    font-size: 20px;
+}
+.hot_search_game_key {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+    padding: 9px 20px;
+    border-radius: 26px;
+    background: #eee;
+    font-size: 16px;
+    line-height: 25px;
+    color: #333;
+    transition: all .3s;
+}
+.search_bar_input:focus-visible {
+    outline: none;
+}
+.search_bar_input:focus + .search_submit_btn {
+    background: var(--info-color);
+    color: #111;
+}
+/* search page | end */
+
+/* search inside game page | start */
+.dicegamessos_game_search_list_content {
+    background: var(--light-bg-color);
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 16px;
+    transition: all .3s;
+}
+.search_list_img {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    margin-right: 12px;
+    overflow: hidden;
+}
+.search_list_info {
+    width: calc(100% - 208px);
+}
+.search_list_info p {
+    font-weight: 400;
+    margin-top: 8px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.search_list_info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+.search_page_btn {
+    font-size: 16px;
+    border-radius: 20px;
+    margin-left: 36px;
+    line-height: 40px;
+}
+.search_list_info p i {
+    margin-left: 6px;
+    font-size: 12px;
+}
+.dicegamessos_game_search_list_content:hover .search_list_info h4{
+    color: var(--info-color);
+}
+.dicegamessos_game_search_list_content:hover .search_page_btn {
+    border: none;
+    background: linear-gradient(180deg, #9CEDFF 0%, #3ED4F6 100%);
+    box-shadow: 0 2px 6px 0 rgb(var(--info-color-rgb), .7);
+    color: #fff;
+}
+.search_not_found_img {
+    width: 250px;
+}
+.search_bot_found_grid {
+    flex-direction: column;
+    margin-top: 30px;
+}
+.search_bot_found_grid h3 {
+    font-size: 20px;
+    color: #fff;
+}
+.search_bot_found_grid p {
+    margin-top: 8px;
+    color: #999;
+    font-weight: 700;
+}
+/* search inside game page | end */
+
+/* error and success message css | start */
+.success_tooltip {
+    display: none;
+    font-size: 13px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 2px;
+}
+.error_tooltip {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    color: white;
+    padding: 8px 15px;
+    font-size: 12px;
+    z-index: 1000;
+}
+.error_tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 5px;
+    border-right: 8px solid #000;
+    border-top: 0px solid #000;
+    border-bottom: 8px solid transparent;
+}
+/* error and success message css | end */
+
+.iconfont {
+    font-size: 19px;
+}
+/* responsive */
+@media screen and (max-width: 1440.98px){
+    .nav_menu_item{
+        flex-direction: column;
+        height: 70px;
+        padding: 12px;
+        align-items: center;
+    }
+    .dicegamessos_game_left_sidebar{
+        width: 130px;
+    }
+    .dicegamessos_game_body_wrapper{
+        padding-left: 130px;
+    }
+    .nav_icon{
+       margin-bottom: 10px;
+        margin-right: 5px;
+        margin-left: 0;
+    }
+    .dicegamessos_game_content_box{
+        padding: 16px;
+    }
+    .dicegamessos_game_list_grid{
+        grid-gap: 12px 12px;
+        grid-template-columns: repeat(10, calc((100% - 108px) / 10));
+    }
+
+    /* category page | start */
+    .dicegamessos_game_card_top_img {
+        width: 70px;
+        height: 70px;
+    }
+    .top_game_card{
+        margin: 12px 12px 0 0;
+    }
+    /* category page | end */
+
+    /* game information page | start */
+    .similar_game_list_grid{
+        gap: 0;
+    }
+    /* game information page | end */
+
+    /* online game page | start */
+    .online_game_top_card_img .game_icon_svg svg {
+        width: 24px;
+    }
+    .online_game_top_card_img .game_icon_svg {
+        width: 32px;
+        height: 32px;
+        top: -10px;
+        left: -10px;
+    }
+    .online_game_top_card_img .game_icon_svg i{
+        font-size: 16px;
+    }
+    /* online game page | end */
+
+
+}
+@media screen and (max-width: 1279px){
+    /* category page | start */
+    .top_game_card{
+        width: calc((100% - 48px) / 5);
+    }
+    .top_game_card:nth-child(5n) {
+        margin-right: 0;
+    }
+    .top_game_card:nth-child(4n), .top_game_card:nth-child(6n) {
+        margin-right: 12px;
+    }
+    .top_game_card:nth-child(n+11){
+        display: none;
+    }
+    /* category page | end */
+
+
+    /* game information page | start */
+    .similar_game_card{
+        width: calc((100% - 80px) / 6);
+    }
+    .similar_game_card:nth-child(n+7){
+        display: none;
+    }
+    .similar_game_card:nth-child(6n) {
+        margin-right: 0;
+    }
+    /* game information page | end */
+}
+@media screen and (max-width: 1180.98px){
+    header{
+        display: block;
+    }
+    .container{
+        padding: 0 16px;
+    }
+    .logo{
+        display: none;
+    }
+    .dicegamessos_game_close_icon {
+        display: block;
+    }
+    .desktop_search_icon {
+        display: none;
+    }
+    .dicegamessos_game_left_sidebar {
+        width: 0%;
+        padding: 0;
+        z-index: 5;
+    }
+    .dicegamessos_game_sidebar_container {
+        width: 222px;
+        background: var(--light-bg-color);
+        height: auto;
+        float: right;
+        padding: 20px;
+    }
+    .dicegamessos_game_content_box {
+        padding: 0;
+    }
+    .nav_menu_item {
+        flex-direction: row;
+        padding: 0 10px;
+        height: 50px;
+    }
+    .nav_icon {
+        margin-right: 16px;
+    }
+    .dicegamessos_game_navigation, .dicegamessos_game_content_box.menu_list_box{
+        margin-top: 16px;
+    }
+    .dicegamessos_game_body_wrapper{
+        padding-left: 0;
+    }
+    footer .container {
+        padding: 0 40px;
+    }
+
+    /* category page | start */
+    .dicegamessos_game_cate_list_card{
+        width: calc((100% - 32px) / 3);
+    }
+    .dicegamessos_game_cate_list_card:nth-child(4n) {
+        margin-right: 16px;
+    }
+    .dicegamessos_game_cate_list_card:nth-child(3n) {
+        margin-right: 0;
+    }
+    .top_game_card{
+        width: calc((100% - 48px) / 5);
+    }
+    .top_game_card:nth-child(4n), .top_game_card:nth-child(3n) {
+        margin-right: 12px;
+    }
+    /* category page | end */
+
+    /* game information page | start */
+    .dicegamessos_game_about_content{
+        width: calc(50% - 8px);
+    }
+    .dicegamessos_game_install_grid {
+        flex-direction: column;
+    }
+    .dicegamessos_game_install_btn_div {
+        width: 100%;
+    }
+    .app_store_btn {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+    /* game information page | end */
+
+
+}
+@media screen and (max-width: 1023px){
+    .dicegamessos_game_list_grid{
+        grid-gap: 8px 8px;
+        grid-template-columns: repeat(10, calc((100% - 72px) / 10));
+    }
+
+    /* category page | start */
+    .top_game_card {
+        width: calc((100% - 36px) / 4);
+    }
+    .top_game_card:nth-child(5n) {
+        margin-right: 12px;
+    }
+    .top_game_card:nth-child(4n){
+        margin-right: 0;
+    }
+    .top_game_card:nth-child(n+9){
+        display: none;
+    }
+    /* category page | end */
+
+    /* play online game page | start */
+    .play_game_body {
+        width: 100%;
+    }
+    .similar_game_list_grid{
+        gap: 0;
+    }
+    /* play online game page | end */
+
+    /* game information page | start */
+    .review_form_wrap {
+        flex-direction: column;
+    }
+    .review_form_group_box{
+        width: 100%;
+    }
+    /* game information page | end */
+}
+@media screen and (max-width: 767.98px){
+    .dicegamessos_game_box:not(.page_inner_game_box) .dicegamessos_game_list_grid {
+        display: flex;
+        width: 100%;
+        overflow-x: scroll;
+        grid-gap: 15px 15px;
+        scrollbar-width: none;
+    }
+    .dicegamessos_game_list_grid {
+        grid-gap: 15px 15px;
+        grid-template-columns: repeat(3, calc((100% - 30px) / 3));
+    }
+    .dicegamessos_game_list_card{
+        overflow: visible;
+    }
+    .dicegamessos_game_box:not(.page_inner_game_box) .dicegamessos_game_card_body {
+        width: 86px;
+        overflow: auto;
+        border: none;
+    }
+    .dicegamessos_game_card_hover {
+        position: relative;
+        bottom: auto;
+        background: transparent;
+        padding: 3px 0;
+    }
+    .dicegamessos_game_card_hover p {
+        color: #333;
+        font-weight: 700;
+    }
+    .dicegamessos_game_heading_wrap h2{
+        font-size: 20px;
+    }
+
+    /* category page | start */
+    .dicegamessos_game_cate_list_card{
+        width: 100%;
+        margin: 16px 0 0;
+    }
+    .dicegamessos_game_cate_list_card:nth-child(4n){
+        margin-right: 0;
+    }
+    .top_game_card{
+        width: calc((100% - 12px) / 2);
+        margin: 12px 12px 0 0;
+    }
+    .top_game_card:nth-child(2n) {
+        margin-right: 0;
+    }
+    /* category page | end */
+
+    /* game information page | start */
+    .dicegamessos_game_detail_img {
+        width: 93px;
+        height: 93px;
+        margin-right: 12px;
+    }
+    .dicegamessos_game_detail h2{
+        font-size: 18px;
+        color: var(--bg-color);
+        margin-bottom: 0;
+    }
+    .dicegamessos_game_detail {
+        width: calc(100% - 105px);
+    }
+    .dicegamessos_game_cate_review_wrap .row{
+        justify-content: space-between;
+    }
+    .dicegamessos_game_cate_item {
+        text-align: left;
+    }
+    .review_star_box i {
+        font-size: 9px;
+        margin-right: 1px;
+    }
+    .dicegamessos_game_rate_item{
+        padding: 0 10px;
+        margin: 0;
+    }
+    /* .game_detail_wrapper h4{
+        margin-bottom: 12px;
+    } */
+    .dicegamessos_game_about_content {
+        width: 100%;
+    }
+    .game_info_page_subtitle{
+        font-size: 20px;
+    }
+    .game_security_div > .row, .review_use_name_box{
+        flex-direction: column;
+    }
+    .game_security_div .verified_icon_text{
+        margin: 0;
+    }
+    .game_security_div p {
+        margin-top: 7px;
+    }
+    .similar_game_card {
+        width: calc((100% - 32px) / 3);
+        overflow: hidden;
+    }
+    .similar_game_card:nth-child(3n) {
+        margin-right: 0;
+    }
+    .similar_game_list_grid{
+        gap: 0;
+    }
+    .similar_game_card .dicegamessos_game_card_hover{
+        position: absolute;
+    }
+    input[name="name"].form_control {
+        width: 100%;
+    }
+    .submit_button{
+        width: 100%;
+        margin: 16px 0 0 0;
+    }
+    /* game information page | end */
+
+    /* play online game page | start */
+    .play_game_body {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .full_screen{
+        display: none;
+    }
+    .choice_btn{
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 24px;
+    }
+    .desktop_btn{
+        display: none;
+    }
+    .mobile_play_btn{
+        display: block;
+    }
+    .play_info_content {
+        width: calc(100% - 100px);
+    }
+    /* play online game page | end */
+
+}
+@media (max-width: 576.98px) {
+    /* .swiper_slider_image_main .swiper .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 220px;
+    } */
+}
+@media (max-width: 450.98px) {
+    /* game information page | start */
+    .review_rate_box {
+        margin-bottom: 35px;
+    }
+    /* game information page | end */
+}
+
+/* playstore popup starts*/
+#apkBox.active {
+    display: flex;
+}
+#apkBox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+#apkBox .dBox {
+    width: 480px;
+    height: 202px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+    margin: 0 15px;
+}
+#apkBox .dBox .Btn>a+a {
+    background: #3ed4f6;
+    color: #fff;
+    margin-left: 15px;
+}
+#apkBox .dBox .Btn>a {
+    display: inline-block;
+    line-height: 38px;
+    text-align: center;
+    width: 160px;
+    height: 40px;
+    background: #fff;
+    color: #3ed4f6;
+    border-radius: 10px;
+    border: 1px solid #3ed4f6;
+    transition: all .3s;
+    font-family: Baloo2-Bold;
+}
+#apkBox .dBox>h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+    text-transform: none;
+}
+#apkBox .dBox span{
+    display: inline-block;
+}
+
+/*playstore popup ends*/
+
+/* extension page | start */
+.extension_game_list_grid {
+    /* display: grid;
+    grid-template-columns: repeat(8, calc((100% - 28px) / 8)); */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+.extension_game_list_grid .extension_game_list_card {
+    width: calc((100% - 28px) / 8);
+    margin: 4px 4px 0 0;
+    position: relative;
+    transition: all .3s;
+}
+.extension_game_list_grid .extension_game_list_card:nth-child(6n) {
+    margin: 4px 0 0;
+}
+.extension_game_list_grid .extension_game_list_card:hover {
+    transform: scale(1.04);
+}
+.extension_card_body {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 4px solid transparent;
+}
+.extension_game_list_card:hover .extension_card_body {
+    border: 4px solid rgba(62, 212, 246, .7);
+}
+.extension_card_image {
+    padding-bottom: calc(100% - 4px);
+}
+.extension_game_list_card:hover .extension_card_image {
+    border: 2px solid #3ED4F6;
+}
+.extension_game_card_hover {
+    left: 2px;
+    bottom: -45px;
+    width: calc(100% - 4px);
+    border-radius: 0 0 14px 14px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .4);
+    padding: 12px;
+    backdrop-filter: none;
+}
+.extension_game_list_grid .extension_game_list_card:hover .extension_game_card_hover {
+    bottom: 2px;
+}
+.extension_game_card_hover p {
+    font-size: 16px;
+    line-height: 20px;
+}
+/* responsive */
+@media screen and (max-width: 1279.98px){
+    .extension_game_list_grid .extension_game_list_card {
+        width: calc((100% - 20px) / 6);
+    }
+}
+@media screen and (max-width: 767.98px){
+    .extension_game_list_grid .extension_game_list_card {
+        width: calc((100% - 8px) / 3);
+    }
+    .extension_game_list_grid .extension_game_list_card:nth-child(3n) {
+        margin: 4px 0 0;
+    }
+    .extension_card_body .extension_game_card_hover{
+        position: absolute;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .4);
+    }
+    .extension_card_body .extension_game_card_hover p{
+        color: #fff;
+    }
+}
+/* extension page | end */
+
+.cc-window {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #4da6ff; /* dark background */
+  color: #000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.cc-message {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.cc-link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.cc-link:hover,
+.cc-link:focus {
+  color: #000;
+  outline: none;
+}
+
+.cc-compliance {
+  flex-shrink: 0;
+}
+
+.cc-btn {
+  background-color: #000;
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cc-btn:hover,
+.cc-btn:focus {
+  background-color: #000;
+  outline: none;
+}
+
+
+.swiper-slide img {
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
