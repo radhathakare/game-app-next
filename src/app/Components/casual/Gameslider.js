@@ -206,8 +206,8 @@ export default function GameCategorySlider() {
                 </div>
                 <div className="dicegamessos_game_cate_info top_card_info">
                   <h5>{game.title}</h5>
-                  <p>
-                    {game.rating} <Star className="inline-block w-4 h-4" />
+                  <p className='row align_center js_center gap-1'>
+                    {game.rating} <Star className="inline-block w-3 h-3 fill-gray-400 text-gray-400"  />
                   </p>
                 </div>
                 <div className="top_card_button primary_btn">
@@ -219,41 +219,53 @@ export default function GameCategorySlider() {
         </div>
 
         {/* Pagination */}
-      <div className="card_button_div row align_center js_center gap-4 w-auto">
-  {/* Prev Arrow */}
-  <button
-    onClick={handlePrev}
-    disabled={currentPage === 1}
-    className={`w-10 h-10 rounded-full border bg-white flex items-center justify-center 
+        <div className="card_button_div row align_center js_center gap-4 w-auto">
+          {/* Prev Arrow */}
+          <button
+            onClick={handlePrev}
+            // Remove disabled prop to keep the arrow always clickable
+            className={`w-10 h-10 rounded-full flex items-center justify-center 
       border-gray-300 transition-all duration-200
-      hover:border-blue-600
-      ${currentPage === 1 ? "cursor-pointer" : "cursor-pointer hover:shadow-md"}
+      border-transparent bg-transparent
+      border-blue-600 bg-white shadow-md 
+      cursor-pointer 
     `}
-  >
-    <ArrowLeft className={`transition-colors duration-200 
-      ${currentPage === 1 ? "text-gray-400" : "text-black hover:text-blue-600"}`} />
-  </button>
+          >
+            <ArrowLeft
+              className={`transition-colors duration-200
+        ${
+          // Keep arrow color consistent, or change based on your preference
+          currentPage === 1 ? "text-gray-400" : "text-black hover:text-blue-600"
+        }`}
+            />
+          </button>
 
-  {/* Page Number Display */}
-  <span className="text-sm font-medium w-auto flex items-center whitespace-nowrap">
-    <span className="text-blue-600">{currentPage}</span> / {totalPages}
-  </span>
+          {/* Page Number Display */}
+          <p className="text-sm font-medium w-auto flex items-center whitespace-nowrap">
+            <span className="text-blue-600">{currentPage}</span> / {totalPages}
+          </p>
 
-  {/* Next Arrow */}
-  <button
-    onClick={handleNext}
-    disabled={currentPage === totalPages}
-    className={`w-10 h-10 rounded-full border bg-white flex items-center justify-center 
+          {/* Next Arrow */}
+          <button
+            onClick={handleNext}
+           className={`w-10 h-10 rounded-full flex items-center justify-center 
       border-gray-300 transition-all duration-200
-      hover:border-blue-600
-      ${currentPage === totalPages ? "cursor-pointer" : "cursor-pointer hover:shadow-md"}
+      border-transparent bg-transparent
+      border-blue-600 bg-white shadow-md 
+      cursor-pointer 
     `}
-  >
-    <ArrowRight className={`transition-colors duration-200 
-      ${currentPage === totalPages ? "text-gray-400" : "text-black hover:text-blue-600"}`} />
-  </button>
-</div>
-
+          >
+            <ArrowRight
+              className={`transition-colors duration-200
+        ${
+          // Keep arrow color consistent, or change based on your preference
+          currentPage === totalPages
+            ? "text-gray-400"
+            : "text-black hover:text-blue-600"
+        }`}
+            />
+          </button>
+        </div>
       </div>
     </div>
   );

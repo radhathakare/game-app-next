@@ -1,64 +1,90 @@
-import { useEffect } from "react";
+'use client';
+
+import React from "react"; 
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Link from 'next/link';
 
 const GameImageCarousel = ({ title, imageCount = 7 }) => {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const Swiper = require("swiper").default;
+  const formattedTitle = title.trim();
 
-      setTimeout(() => {
-        new Swiper(".swiper", {
-          slidesPerView: "auto",
-          spaceBetween: 10,
-          loop: false,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-        });
-      }, 0);
-    }
-  }, []);
-
-  const formattedTitle = title.replace(/[^a-zA-Z0-9]/g, " ").trim();
+  const bannerGames = Array.from({ length: imageCount }).map((_, i) => ({
+    link: `/game/${formattedTitle}-${i + 1}`,
+    banner: `/images/${formattedTitle}_${i + 1}.png`, 
+    icon: `/images/icon${i + 1}.png`, 
+    title: `Game Title ${i + 1}`,
+  }));
 
   return (
     <div className="dicegamessos_game_box swiper_slider_image_main">
-      <div className="swiper">
-        <div className="swiper-wrapper">
-          {[...Array(imageCount)].map((_, index) => {
-            const imageIndex = index + 1;
-            const fileName = `${formattedTitle}_${imageIndex}.png`;
-
-            return (
-              <div className="swiper-slide game_info_img_slide" key={imageIndex}>
+      <Swiper
+        modules={[Navigation, Pagination]}
+        slidesPerView="auto"
+        spaceBetween={20}
+        loop={true}
+        centeredSlides={true}
+        initialSlide={bannerGames.length > 0 ? Math.floor(bannerGames.length / 3) : 0}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        pagination={{
+          el: ".swiper-pagination",
+          clickable: true,
+        }}
+        className="game_banner_slider_grid"
+      >
+        {bannerGames.map((game, index) => (
+          <SwiperSlide
+            key={index}
+            className="swiper-slide game_banner_slide_container"
+          >
+            <Link href={game.link} className="game_banner_slide">
+              <div className="game_banner_img">
                 <img
-                  id={`img_ss_${imageIndex}`}
-                  src={`/images/${fileName}`}
-                  alt={`Slide ${imageIndex}`}
+                  src={game.banner}
+                  alt={game.title}
                   onError={(e) => {
-                    e.target.src = "/images/placeholder.png";
+                    e.target.src = "/images/placeholder.png"; 
                   }}
                 />
               </div>
-            );
-          })}
+              <div className="top_btn_img">
+                <img
+                  src={`/images/top${index + 1}.png`}
+                  alt="top button image"
+                  onError={(e) => {
+                    e.target.src = "/images/placeholder.png"; 
+                  }}
+                />
+              </div>
+              <div className="slider_game_button row align_center">
+                <img
+                  src={game.icon}
+                  alt={game.title}
+                  onError={(e) => {
+                    e.target.src = "/images/placeholder.png"; 
+                  }}
+                />
+                <span>{game.title}</span>
+              </div>
+            </Link>
+          </SwiperSlide>
+        ))}
+
+    
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-prev swiper_button swiper_button_dark">
+            {/* <ArrowLeft className="text-black" /> */}
         </div>
-        <div className="swiper-button-prev swiper_button">
-          <ArrowLeft className="iconfont" />
+        <div className="swiper-button-next swiper_button swiper_button_dark">
+            {/* <ArrowRight className="text-black" /> */}
         </div>
-        <div className="swiper-button-next swiper_button">
-          <ArrowRight className="iconfont" />
-        </div>
-        <div className="swiper-pagination"></div> {/* Important */}
-      </div>
+      </Swiper>
     </div>
   );
 };

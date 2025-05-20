@@ -43,7 +43,7 @@ const toggleSidebar = () => {
                 <div className="dicegamessos_game_body_wrapper">
                   <div className="dicegamessos_game_content_main">
                     <div className="container">
-                    <GameBanner/>
+                    <GameBanner title="Racing Games"/>
                      
                       <div className="ad_box">Advertisement</div>
     

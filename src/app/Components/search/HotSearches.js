@@ -16,7 +16,7 @@ export default function HotSearches() {
           {hotSearches.map((search, index) => (
             <a 
               key={index}
-              href={`/search/${search.toLowerCase().replace(/\s+/g, '-')}`} 
+              href={`/search/${search}`} 
               className="hot_search_game_key"
             >
               {search}

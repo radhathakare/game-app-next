@@ -9,7 +9,6 @@ import {
   Package,
   Code,
   Award,
-  VerifiedIcon,
 } from "lucide-react";
 import { MdVerifiedUser } from "react-icons/md";
 import SimilarGames from "./SimilarGames";
@@ -181,7 +180,7 @@ export function GameDetails({ game }) {
             </div>
 
             <div className="game_security_div">
-              <div className="row ">
+              <div className="row align_center">
                 <p className="verified_icon_text row">
                   <MdVerifiedUser className="w-5 h-5" />
                   <span>Verified antivirus</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react'; // Import useEffect
+import { useState, useEffect } from 'react';
 import Sidebar from '../../Components/layout/Sidebar';
 import Footer from '../../Components/layout/Footer';
 import Header from '../../Components/layout/Header';
@@ -13,7 +13,7 @@ import HotGames from '../../Components/category/HotGames';
 
 export default function CasualPage() {
    const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [allGames, setAllGames] = useState([]); // State to hold all game data
+  const [allGames, setAllGames] = useState([]); 
 const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
@@ -43,7 +43,7 @@ const toggleSidebar = () => {
                 <div className="dicegamessos_game_body_wrapper">
                   <div className="dicegamessos_game_content_main">
                     <div className="container">
-                    <GameBanner/>
+                    <GameBanner title="Casual Games"/>
                      
                       <div className="ad_box">Advertisement</div>
     

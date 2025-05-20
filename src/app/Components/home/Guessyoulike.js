@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { Star } from 'lucide-react';
 
 const games = [
   {
@@ -98,7 +99,7 @@ const GuessYouLike = () => {
               </div>
               <div className="dicegamessos_game_cate_info top_card_info">
                 <h5>{game.title}</h5>
-                <p>5 <i className="iconfont icon-xing"></i></p>
+                <p className='row align_center js_center gap-1'>5 <Star className="inline-block w-3 h-3 fill-gray-400 text-gray-400"  /></p>
               </div>
               <div className="top_card_button primary_btn">
                 <span className="card_view_btn_text">View</span>

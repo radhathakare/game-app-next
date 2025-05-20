@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Star } from 'lucide-react';
+import { Star , } from 'lucide-react';
 
 const topGames = [
   { id: 1, title: "Hidden Escape Mysteries", icon: "/images/Hidden Escape Mysteries_icon.png", link: "/games/Hidden Escape Mysteries", rating: 5 },
@@ -75,7 +75,7 @@ export default function TopGames() {
                 </div>
                 <div className="dicegamessos_game_cate_info top_card_info">
                   <h5>{game.title}</h5>
-                  <p>{game.rating} <Star className="inline-block w-4 h-4" /></p>
+                  <p className='row align_center js_center gap-1'>{game.rating}  <Star className="inline-block w-3 h-3 fill-gray-400 text-gray-400"  /></p>
                 </div>
                 <div className="top_card_button primary_btn">
                   <span className="card_view_btn_text">View</span>
